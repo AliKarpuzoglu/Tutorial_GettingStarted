@@ -9,5 +9,13 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_search">Search</string>
+    <string name="delete">Delete</string>
+
+    <string name="deleted">deleted</string>
+    <string name="not_implemented">not yet implemented</string>
+
+    <string name="dialog_dialog_list">What do you want to do?</string>
+    <string name="set_time">Reminder</string>
+    <string name="cancel">Cancel</string>
 </resources>
 

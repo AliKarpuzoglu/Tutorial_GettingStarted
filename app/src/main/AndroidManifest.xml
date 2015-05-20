@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ali.tutorial_gettingstarted" >
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <application
+
+    <application>
 
 
     android:allowBackup="true"
@@ -18,12 +17,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".DisplayMessageActivity"
-            android:label="@string/title_activity_display_message"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
+
+        <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ali.tutorial_gettingstarted.MainActivity" />
         </activity>
