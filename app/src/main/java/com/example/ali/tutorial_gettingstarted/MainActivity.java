@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 
         readItems();
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, toDo);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, toDo);
         listViewItems.setAdapter(adapter);
 
 
@@ -117,10 +117,10 @@ public class MainActivity extends Activity {
         File filesDir = getFilesDir();
         File todoFile = new File(filesDir, "todo.txt");
         try {
-            toDo = new ArrayList<String>(FileUtils.readLines(todoFile));
+            toDo = new ArrayList<>(FileUtils.readLines(todoFile));
         } catch (IOException e) {
 
-            toDo = new ArrayList<String>();
+            toDo = new ArrayList<>();
             toDo.add("couldn't read data");
         }
     }
@@ -154,7 +154,7 @@ public class MainActivity extends Activity {
 
                         //toast popup
                         Context context = getApplicationContext();
-                        CharSequence text =  getResources().getString(R.string.deleted);;
+                        CharSequence text =  getResources().getString(R.string.deleted);
                         int duration = Toast.LENGTH_SHORT;
 
                         Toast toast = Toast.makeText(context, text, duration);
@@ -164,9 +164,11 @@ public class MainActivity extends Activity {
         alertBuilder.setNeutralButton(R.string.set_time, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+                //TODO: Integrate in google calendar?
                 //toast
                 Context context = getApplicationContext();
-                CharSequence text =  getResources().getString(R.string.not_implemented);;
+                CharSequence text =  getResources().getString(R.string.not_implemented);
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
