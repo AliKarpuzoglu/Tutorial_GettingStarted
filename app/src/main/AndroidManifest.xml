@@ -3,8 +3,6 @@
     package="com.example.ali.tutorial_gettingstarted" >
 
     <application>
-
-
     android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-        <meta-data
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ali.tutorial_gettingstarted.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteNote"
+            android:label="@string/title_activity_write_note"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ali.tutorial_gettingstarted.MainActivity" />
         </activity>

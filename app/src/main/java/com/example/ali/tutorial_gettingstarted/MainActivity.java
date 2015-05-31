@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
     private void openSearch() {
     }
 
-    public void sendMessage(View view) {
+    public void     sendMessage(View view) {
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         if (message.length() == 0) {
@@ -166,6 +166,7 @@ public class MainActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
 
                 //TODO: Integrate in google calendar?
+
                 //toast
                 Context context = getApplicationContext();
                 CharSequence text =  getResources().getString(R.string.not_implemented);
